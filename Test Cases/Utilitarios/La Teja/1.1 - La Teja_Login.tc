@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1.1 - La Teja_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b584166d-9def-438b-b5e7-904b1dfd27b0</testCaseGuid>
+   <variable>
+      <defaultValue>'http://fenplanta1:inicio@informat:8190/cdcpro/servlet/hlogin'</defaultValue>
+      <description></description>
+      <id>3b7a5001-2fc8-454b-9f88-2b42389ed050</id>
+      <masked>false</masked>
+      <name>URLLogin</name>
+   </variable>
+   <variable>
+      <defaultValue>'FENPLANTA1'</defaultValue>
+      <description></description>
+      <id>2b32ca88-f698-4a04-a7ab-6142d59449cb</id>
+      <masked>false</masked>
+      <name>ValidaPlanta</name>
+   </variable>
+   <variable>
+      <defaultValue>'WEBDESA'</defaultValue>
+      <description></description>
+      <id>cb3987d0-3440-49d5-9980-cac7c5492130</id>
+      <masked>false</masked>
+      <name>SelectGrupo</name>
+   </variable>
+</TestCaseEntity>
