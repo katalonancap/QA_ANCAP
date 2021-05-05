@@ -48,7 +48,7 @@ class execution_listeners {
 	
 	def tearDownTestCase(TestCaseContext testCaseContext) {
 		def testCaseStatus = testCaseContext.getTestCaseStatus();
-		if(testCaseStatus.equals('FAILED'||'ERROR'))
+		if(testCaseStatus.equals('FAILED') || ('ERROR'))
 		{
 		System.out.println("Test case is FAILED")
 		
