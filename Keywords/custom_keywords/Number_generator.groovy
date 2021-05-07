@@ -1,4 +1,4 @@
-package custom
+package custom_keywords
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -40,52 +40,60 @@ import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 import org.apache.commons.lang.RandomStringUtils as RandStr
 import java.util.concurrent.ThreadLocalRandom
 
+/**
+ Custom Keyword - 'Number_generator':
+ 1   - Genera un número 'Random' (aleatorio)
+ 2   - Parametros:
+ 2.1 - minimum: contiene el valor minimo que puede generar
+ 2.2 - maximum: tiene el valor maximo y usa esta cantidad de carateres para generar el valor
+ (si 'maximum' es '999999' genera un valor de 6 digitos)
+ */
 
-public class Numbers {
+public class Number_generator {
 
 	@Keyword
 	def randomNumber(TestObject to, int minimum, int maximum) {
 		def randomNumber = ThreadLocalRandom.current().nextInt(minimum, maximum + 1)
 		WebUI.findWebElement(to).sendKeys(String.valueOf(randomNumber))
 	}
-
-	/**
-	 * Refresh browser
-	 @Keywordf
-	 def refreshBrowser() {
-	 KeywordUtil.logInfo("Refreshing")
-	 WebDriver webDriver = DriverFactory.getWebDriver()
-	 webDriver.navigate().refresh()
-	 KeywordUtil.markPassed("Refresh successfully")
-	 }
-	 */
-	/**
-	 * Click element
-	 * @param to Katalon test object
-	 @Keyword
-	 def clickElement(TestObject to) {
-	 try {
-	 WebElement element = WebUiBuiltInKeywords.findWebElement(to);
-	 KeywordUtil.logInfo("Clicking element")
-	 element.click()
-	 KeywordUtil.markPassed("Element has been clicked")
-	 } catch (WebElementNotFoundException e) {
-	 KeywordUtil.markFailed("Element not found")
-	 } catch (Exception e) {
-	 KeywordUtil.markFailed("Fail to click on element")
-	 }
-	 }
-	 */
-	/**
-	 * Get all rows of HTML table
-	 * @param table Katalon test object represent for HTML table
-	 * @param outerTagName outer tag name of TR tag, usually is TBODY
-	 * @return All rows inside HTML table
-	 @Keyword
-	 def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
-	 WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
-	 List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
-	 return selectedRows
-	 }
-	 */
 }
+
+/**
+ * Refresh browser
+ @Keywordf
+ def refreshBrowser() {
+ KeywordUtil.logInfo("Refreshing")
+ WebDriver webDriver = DriverFactory.getWebDriver()
+ webDriver.navigate().refresh()
+ KeywordUtil.markPassed("Refresh successfully")
+ }
+ */
+/**
+ * Click element
+ * @param to Katalon test object
+ @Keyword
+ def clickElement(TestObject to) {
+ try {
+ WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+ KeywordUtil.logInfo("Clicking element")
+ element.click()
+ KeywordUtil.markPassed("Element has been clicked")
+ } catch (WebElementNotFoundException e) {
+ KeywordUtil.markFailed("Element not found")
+ } catch (Exception e) {
+ KeywordUtil.markFailed("Fail to click on element")
+ }
+ }
+ */
+/**
+ * Get all rows of HTML table
+ * @param table Katalon test object represent for HTML table
+ * @param outerTagName outer tag name of TR tag, usually is TBODY
+ * @return All rows inside HTML table
+ @Keyword
+ def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
+ WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
+ List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
+ return selectedRows
+ }
+ */

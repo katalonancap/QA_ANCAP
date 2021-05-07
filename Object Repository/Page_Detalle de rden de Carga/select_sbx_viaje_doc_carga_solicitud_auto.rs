@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_Comerc.-Gest.Com.Op.Ventas SupComerc_ecf14a</name>
+   <name>select_sbx_viaje_doc_carga_solicitud_auto</name>
    <tag></tag>
-   <elementGuidId>6588a88c-8f0f-42cb-a2dd-cd76eacbc053</elementGuidId>
+   <elementGuidId>1877b69d-ba67-4288-8989-28026e5cc97d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//select[@id='vGRPID']</value>
+         <value>//select[@id='W0038W0025W0021vGENSOLAUT']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#vGRPID</value>
+         <value>#W0038W0025W0021vGENSOLAUT</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,14 +28,14 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>vGRPID</value>
+      <value>W0038W0025W0021vGENSOLAUT</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>vGRPID</value>
+      <value>W0038W0025W0021vGENSOLAUT</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -49,7 +49,7 @@
       <matchCondition>equals</matchCondition>
       <name>onfocus</name>
       <type>Main</type>
-      <value>gx.evt.onfocus(this, 33,'',false,'',0)</value>
+      <value>gx.evt.onfocus(this, 134,'W0038W0025W0021',false,'',0)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <matchCondition>equals</matchCondition>
       <name>onblur</name>
       <type>Main</type>
-      <value>;gx.evt.onblur(33);</value>
+      <value>;gx.evt.onblur(134);</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -73,60 +73,88 @@
       <value>if(!(gx.evt.jsEvent(this))) return false;</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>gxvalid</name>
+      <type>Main</type>
+      <value>1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>gxhiddenonchange</name>
+      <type>Main</type>
+      <value>N</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>gxctrlchanged</name>
+      <type>Main</type>
+      <value>1</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>
-Comerc.-Gest.Com.Op.Ventas SupComerc.-Gest.Com.Op.Ventas UsuControladoresComerc.-Ptas.Dist.Prog.Entreg.Fiscales La TejaPlanific. y Desarrollo-StaffTerminal TerrestreVIGILANCIA LA TEJADesa</value>
+SiNo</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;vGRPID&quot;)</value>
+      <value>id(&quot;W0038W0025W0021vGENSOLAUT&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//select[@id='vGRPID']</value>
+      <value>//select[@id='W0038W0025W0021vGENSOLAUT']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='TBLSELECCIONGRUPO']/tbody/tr/td[2]/select</value>
+      <value>//table[@id='W0038W0025W0021TABLE2']/tbody/tr[14]/td[2]/select</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Seleccione un Grupo'])[1]/following::select[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Solicitud automática ?'])[1]/following::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='FENPLANTA1'])[1]/following::select[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Planta Flete'])[1]/following::select[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'vGRPID', '&quot;', ')')])[1]/preceding::select[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Solicitud de entrega'])[1]/preceding::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Orden Oficial'])[1]/preceding::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//select</value>
+      <value>//tr[14]/td[2]/select</value>
    </webElementXpaths>
 </WebElementEntity>

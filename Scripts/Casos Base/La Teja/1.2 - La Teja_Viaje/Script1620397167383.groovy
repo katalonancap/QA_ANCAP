@@ -17,6 +17,18 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+/**
+ Teste Case - Viaje: Crea un nuevo Viaje
+ 1   - Accede a la pantalla 'Trabajar con Viaje'
+ 2   - Verifica si está presente el texto 'Trabajar con Viajes' (está en la pantalla correcta)
+ 3   - Presiona el botón 'Nuevo'
+ 4   - Verifica que el campo 'Fecha' está presente 
+ 5   - Pone foco en el campo Fecha y ingresa la fecha
+ 6   - Ingresa ID del Distribuidor, Camión y Documento del Conductor 
+ 7   - Presiona el botón 'Aceptar'
+ 8   - Verifica que está en la pestaña 'Detalle Documento de Carga'
+ */
+
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
@@ -27,21 +39,23 @@ WebUI.verifyElementText(findTestObject('Page_Trabajar con Viajes/span_txt_viaje_
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_viaje_btn_nuevo'))
 
-WebUI.waitForElementPresent(findTestObject('Page_Trabajar con Viajes/img_calendar_viaje_fecha'), 0)
+WebUI.waitForPageLoad(0)
 
-WebUI.click(findTestObject('Page_Trabajar con Viajes/img_calendar_viaje_fecha'))
+WebUI.verifyElementVisible(findTestObject('Page_Trabajar con Viajes/img_calendar_viaje_fecha'))
 
-WebUI.click(findTestObject('Page_Trabajar con Viajes/td_calendar_viaje_fecha_hoy'))
+WebUI.focus(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_fecha'))
 
-WebUI.click(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_fecha'))
+WebUI.sendKeys(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_fecha'), FechaViaje, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_fecha'), Keys.chord(Keys.TAB))
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_cliente_o_distribuidora'))
 
-WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_cliente_o_distribuidora'), '22')
+WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_cliente_o_distribuidora'), IdDistribuidor)
 
-WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_camion'), '10')
+WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_camion'), IdCamion)
 
-WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_conductor'), '11111111')
+WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_conductor'), DocConductor)
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_btn_viaje_aceptar'))
 

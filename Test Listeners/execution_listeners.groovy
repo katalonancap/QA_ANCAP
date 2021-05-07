@@ -31,25 +31,24 @@ import java.util.Date;
 class execution_listeners {
 	
 	/**
-	 * Executes before every test case starts.
-	 * @param testCaseContext related information of the executed test case.
-	 */
-	@BeforeTestCase
-	/**def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		println testCaseContext.getTestCaseVariables()
-	} */
-
-	/**
 	 * Executes after every test case ends.
 	 * @param testCaseContext related information of the executed test case.
+	 */
+	/**
+	 Listener - 'tearDownTestCase':
+	 1   - Verifica el estado en que finalizó el Test Case
+	 2.1 - Si tiene estado 'FAILED' o 'ERROR'
+	 2.2 - Imprime "Test case is FAILED"
+	 2.3 - Captura un Screenshot (con fecha y hora de la captura)
+	 2.4 - Cierra el navegador
+	 3.1 - Si tiene estado PASSED
+	 3.2 - Imprime "Test case SUCCESSFUL"
 	 */
 	@AfterTestCase
 	
 	def tearDownTestCase(TestCaseContext testCaseContext) {
 		def testCaseStatus = testCaseContext.getTestCaseStatus();
-		if(testCaseStatus.equals('FAILED') || ('ERROR'))
-		{
+		if(testCaseStatus.equals('FAILED')) {
 		System.out.println("Test case is FAILED")
 		
 		try {
@@ -59,12 +58,34 @@ class execution_listeners {
 				}catch (Exception e) {    e.printStackTrace()}
 				
 				WebUI.closeBrowser()
-		}
-		else{
+				
+		}else if (testCaseStatus.equals('ERROR')) {
+			
+			System.out.println("Test case is FAILED")
+			
+			try {
+					Date data = new Date(System.currentTimeMillis())
+					SimpleDateFormat formatarDate = new SimpleDateFormat('yyyyMMdd_HHmmss')
+					WebUI.takeScreenshot(('C:\\Katalon\\Screenshots\\Screenshot_' + formatarDate.format(data)) + '.png')
+					}catch (Exception e) {    e.printStackTrace()}
+					
+					WebUI.closeBrowser()
+					
+			}else {
+				
 			System.out.println("Test case SUCCESSFUL")
 		}
 	}
 
+	/**
+	 * Executes before every test case starts.
+	 * @param testCaseContext related information of the executed test case.
+	@BeforeTestCase
+	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+		println testCaseContext.getTestCaseId()
+		println testCaseContext.getTestCaseVariables()
+	} */
+	
 	/**
 	 * Executes before every test suite starts.
 	 * @param testSuiteContext: related information of the executed test suite.

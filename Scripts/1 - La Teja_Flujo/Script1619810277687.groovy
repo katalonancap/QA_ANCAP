@@ -17,10 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Utilitarios/La Teja/1.1 - La Teja_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.1 - La Teja_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.callTestCase(findTestCase('Other Cases/La Teja/1.3 - La Teja_Viaje_Hoy'), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('Utilitarios/La Teja/1.2 - La Teja_Viaje'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.2 - La Teja_Viaje'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Utilitarios/La Teja/1.4 - La Teja_Viaje_Doc_Carga'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.4 - La Teja_Viaje_Doc_Carga'), [:], FailureHandling.STOP_ON_FAILURE)
+
+
 

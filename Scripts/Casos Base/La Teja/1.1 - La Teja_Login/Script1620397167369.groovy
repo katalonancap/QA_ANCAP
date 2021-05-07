@@ -18,6 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import java.net.URLEncoder as URLEncoder
 
+/**
+ Teste Case - Login: Hace login en el sistema ANTARES
+ 1.1 - Abre el navegafor
+ 1.2 - Maximiza el navegador
+ 2   - Accede a la URL (ya con Usuario y Contraseña)
+ 3   - Verifica que el login se hizo en la 'Planta' correcta
+ 4   - Selecciona el grupo (perfil del usuario)
+ 5   - Hace clic en el botón para login
+ 6   - Realiza nueva validación de que está en la HomePage de la planta correcta 
+ */
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Seleccione un Grupo_BTNLOGIN</name>
+   <name>input_cbox_viaje_doc_carga_orden_oficial</name>
    <tag></tag>
-   <elementGuidId>52313f39-0a5c-4a66-a55e-850a8928493c</elementGuidId>
+   <elementGuidId>ed039271-17dd-49ec-ab1a-47c9df6ee283</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name='BTNLOGIN']</value>
+         <value>//input[@id='W0038W0025W0021VUORDOFI']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input[name=&quot;BTNLOGIN&quot;]</value>
+         <value>#W0038W0025W0021VUORDOFI</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,76 +28,104 @@
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>button</value>
+      <value>text</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>W0038W0025W0021VUORDOFI</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>BTNLOGIN</value>
+      <value>W0038W0025W0021VUORDOFI</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Ingresar</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>size</name>
       <type>Main</type>
-      <value>Ingresar</value>
+      <value>10</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>maxlength</name>
+      <type>Main</type>
+      <value>10</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>BtnText</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>onclick</name>
-      <type>Main</type>
-      <value>if( gx.evt.jsEvent(this)) {gx.evt.execEvt('E\'LOGIN\'.',this);} else return false;</value>
+      <value>K2BTrnAttribute</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>onfocus</name>
       <type>Main</type>
-      <value>gx.evt.onfocus(this, 37,'',false,'',0)</value>
+      <value>gx.evt.onfocus(this, 144,'W0038W0025W0021',false,'',0)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onchange</name>
+      <type>Main</type>
+      <value>gx.evt.onchange(this)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onblur</name>
+      <type>Main</type>
+      <value>gx.num.valid_integer( this,'.');;gx.evt.onblur(144);</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>gxvalid</name>
+      <type>Main</type>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;TBLSELECCIONGRUPO&quot;)/tbody[1]/tr[2]/td[2]/span[@class=&quot;BaseRBtn RButton&quot;]/span[@class=&quot;BtnLeft&quot;]/span[@class=&quot;BtnRight&quot;]/span[@class=&quot;BtnBackground&quot;]/input[@class=&quot;BtnText&quot;]</value>
+      <value>id(&quot;W0038W0025W0021VUORDOFI&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@name='BTNLOGIN']</value>
+      <value>//input[@id='W0038W0025W0021VUORDOFI']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='TBLSELECCIONGRUPO']/tbody/tr[2]/td[2]/span/span/span/span/input</value>
+      <value>//table[@id='W0038W0025W0021TABLE2']/tbody/tr[16]/td[2]/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//input</value>
+      <value>//tr[16]/td[2]/input</value>
    </webElementXpaths>
 </WebElementEntity>

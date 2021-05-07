@@ -13,7 +13,7 @@
       <name>FechaViaje</name>
    </variable>
    <variable>
-      <defaultValue>'22'</defaultValue>
+      <defaultValue>'14'</defaultValue>
       <description></description>
       <id>8615c8fe-7bdb-4d40-877d-bde31c0e0e06</id>
       <masked>false</masked>
