@@ -41,7 +41,7 @@
       <name>IdPolitica</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'LA TEJA'</defaultValue>
       <description></description>
       <id>9cf6a814-4238-46b0-9a64-68c92f2bcb6e</id>
       <masked>false</masked>

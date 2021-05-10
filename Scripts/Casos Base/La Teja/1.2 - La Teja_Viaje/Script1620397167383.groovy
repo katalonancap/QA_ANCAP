@@ -28,7 +28,6 @@ import org.openqa.selenium.Keys as Keys
  7   - Presiona el botón 'Aceptar'
  8   - Verifica que está en la pestaña 'Detalle Documento de Carga'
  */
-
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
@@ -62,4 +61,8 @@ WebUI.click(findTestObject('Page_Trabajar con Viajes/input_btn_viaje_aceptar'))
 WebUI.waitForPageLoad(0)
 
 WebUI.verifyElementVisible(findTestObject('Page_Trabajar con Viajes/span_tab_viaje_documento_Carga'))
+
+def NroViajeAncap = WebUI.getText(findTestObject('Page_Trabajar con Viajes/span_txt_viaje_id_viaje_ancap'))
+
+println('*******>>>>>>>>>>>>Nro del Viaje ANCAP:' + NroViajeAncap)
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_texto_fenplanta1</name>
+   <name>table_viaje_doc_carga_grid_documento</name>
    <tag></tag>
-   <elementGuidId>c670d626-2a0d-4646-ad78-a6f8a45ca270</elementGuidId>
+   <elementGuidId>286af7b9-c3e2-4ade-8b7d-17cf98844851</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*/text()[normalize-space(.)='FENPLANTA1']/parent::*</value>
+         <key>CSS</key>
+         <value>#W0036W0025GridContainerTbl</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#span_CTLUSRNOM</value>
+         <key>XPATH</key>
+         <value>//table[@id='W0036W0025GridContainerTbl']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,83 +21,83 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>ReadonlyK2BFixedData</value>
+      <value>table</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>span_CTLUSRNOM</value>
+      <value>W0036W0025GridContainerTbl</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>Grid_SubWorkWith</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>cellpadding</name>
+      <type>Main</type>
+      <value>0</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>cellspacing</name>
+      <type>Main</type>
+      <value>1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>FENPLANTA1</value>
+      <value>    Doc. IdPlantaStatus del ViajeDocumentoNro de OrdenClienteNombreId de Dirección del Cliente de DistribuidoraDirecciónDirecciónde PolíticaPolíticaStatusen CDC?ObservacionesRemito CDCdel remitoSugeridaEnvasadoraEstado del DocumentoEstado 2211518 1Sin IngresarPendienteEn Proceso De PlantaAnuladoFinalizado.:Todos:.Pendiente 950744    507148 800203ANCAP MEDIO AMBIENTE  1  1MEDIO AMBIENTE 36DIVISIÓN COMBUSTIBLESHabilitadoBloq. Com.BorradoBloq. Fin.HabilitadoSiNoNo      0  0  0  2Completo</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;span_CTLUSRNOM&quot;)</value>
+      <value>id(&quot;W0036W0025GridContainerTbl&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//span[@id='span_CTLUSRNOM']</value>
+      <value>//table[@id='W0036W0025GridContainerTbl']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='TABLE2']/tbody/tr/td[2]/span</value>
+      <value>//div[@id='W0036W0025GridContainerDiv']/table</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bienvenido'])[1]/following::span[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mostrar Anulados'])[1]/following::table[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Seleccione un Grupo'])[1]/preceding::span[1]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::span[6]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>//*/text()[normalize-space(.)='FENPLANTA1']/parent::*</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cliente'])[2]/following::table[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[2]/span</value>
+      <value>//td[2]/table/tbody/tr/td/div/div/div/table</value>
    </webElementXpaths>
 </WebElementEntity>
