@@ -104,12 +104,7 @@ else {
  3 - Ingresa el ID de la 'Via de Entrega'
  4 - Hace un 'Tab' (para que se complete la Politica)
  */
-	/**
- Método - IngresaPolitica : Ingresa el ID de la Politica
- 1 - Verifica si el campo 'Politica' ya fue llenado (verificando si la selección de la politica está presente)
- 2 - Si existe valor en el campo Politica: no tiene acción
- 3 - si el campo politica está vacío: ingresa el ID de la Politica
- */
+
 	/**
  Método - IngresaProducto : Llena los campos que se refieren al 'Producto'
  1 - Limpia el campo Producto para que esté vacío
@@ -117,11 +112,7 @@ else {
  3 - Ingresa la Cantidad
  4 - Ingresa Unidad
  */
-	/**
- Método - ValidaNuevoDocCarga : Valida que el Documento de Carga fue creado
- 1 - Verifica si el ícono 'Lupa' está presente
-***Este método todavía está en desarrollo***
- */
+
 	/**
  Método - ErrorNroOrdenDuplicado : Trata el error por Nro de Orden duplicado
  1 - Verifica si el error 'Número de Orden Duplicado' está presente
