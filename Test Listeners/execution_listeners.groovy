@@ -57,7 +57,7 @@ class execution_listeners {
 				WebUI.takeScreenshot(('C:\\Katalon\\Screenshots\\Screenshot_' + formatarDate.format(data)) + '.png')
 				}catch (Exception e) {    e.printStackTrace()}
 				
-				WebUI.closeBrowser()
+				//WebUI.closeBrowser()
 				
 		}else if (testCaseStatus.equals('ERROR')) {
 			
@@ -69,7 +69,7 @@ class execution_listeners {
 					WebUI.takeScreenshot(('C:\\Katalon\\Screenshots\\Screenshot_' + formatarDate.format(data)) + '.png')
 					}catch (Exception e) {    e.printStackTrace()}
 					
-					WebUI.closeBrowser()
+					//WebUI.closeBrowser()
 					
 			}else {
 				

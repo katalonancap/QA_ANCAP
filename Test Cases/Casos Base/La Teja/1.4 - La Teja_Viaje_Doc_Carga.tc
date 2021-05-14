@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>ab524f18-c8cc-49e9-ac9f-2456b20cf4d1</testCaseGuid>
    <variable>
-      <defaultValue>'6252003'</defaultValue>
+      <defaultValue>'800203'</defaultValue>
       <description></description>
       <id>fa78bda7-0e9e-480f-9d6a-7b007cd57cc8</id>
       <masked>false</masked>
@@ -27,14 +27,14 @@
       <name>IdViaEntrega</name>
    </variable>
    <variable>
-      <defaultValue>'ASFALTOS OFICIALES 2'</defaultValue>
+      <defaultValue>'ENTREGAS A NEGOCIOS ENERGETIC'</defaultValue>
       <description></description>
       <id>1bd6039f-ba14-407e-a862-c47b6e228f5b</id>
       <masked>false</masked>
       <name>Negocio</name>
    </variable>
    <variable>
-      <defaultValue>'30'</defaultValue>
+      <defaultValue>'36'</defaultValue>
       <description></description>
       <id>8a84917f-2bc7-4a1c-85ba-00f83277f4d3</id>
       <masked>false</masked>
@@ -69,7 +69,7 @@
       <name>ProdUnidad</name>
    </variable>
    <variable>
-      <defaultValue>'101645'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>5e1cb48b-56df-465a-be5b-d2e582180242</id>
       <masked>false</masked>

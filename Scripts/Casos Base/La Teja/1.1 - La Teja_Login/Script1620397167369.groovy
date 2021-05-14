@@ -36,7 +36,7 @@ WebUI.navigateToUrl(URLLogin)
 
 WebUI.waitForPageLoad(0)
 
-WebUI.verifyElementText(findTestObject('Page_Bienvenida al sistema/span_texto_fenplanta'), ValidaPlanta)
+WebUI.verifyElementText(findTestObject('Page_Bienvenida al sistema/span_texto_fenplanta'), Planta)
 
 WebUI.selectOptionByValue(findTestObject('Page_Bienvenida al sistema/select_grupo_login'), SelectGrupo, true)
 
@@ -44,5 +44,5 @@ WebUI.click(findTestObject('Page_Bienvenida al sistema/input_btn_login'))
 
 WebUI.waitForPageLoad(0)
 
-WebUI.verifyTextPresent(ValidaPlanta, false)
+WebUI.verifyTextPresent(Planta, false)
 

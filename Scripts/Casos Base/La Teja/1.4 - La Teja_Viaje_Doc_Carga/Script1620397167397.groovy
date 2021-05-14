@@ -33,6 +33,12 @@ import org.openqa.selenium.Keys as Keys
  5.4 - Si el texto 'Solicitud automática ?' NO está presente llena los campos
  5.5 - Llena 'Solicitud de Entrega' si está presente
  */
+/**
+ While: Trata el error por Nro de Orden duplicado
+ 1 - Verifica si el error 'Número de Orden Duplicado' está presente
+ 2 - Si está ingresa un nuevo Nro de Orden aleatorio
+ 3 - Sigue llenando los demás campos y presiona Aceptar
+ */
 WebUI.verifyTextPresent('Detalle de Documentos de Carga del viaje', false)
 
 WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_detalle_doc_carga_nuevo'))
@@ -46,7 +52,8 @@ CustomKeywords.'custom.Number_generator.randomNumber'(findTestObject('Page_Detal
 //--- Ingresa un Nro de Orden fijo (solamente para el caso de hacer alguna prueba especifica)
 //WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), '13700')
 
-def NroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 'value')
+def NroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
+    'value')
 
 WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_cliente'), IdCliente)
 
@@ -55,57 +62,64 @@ IngresaDireccion_viaEntrega()
 WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), FailureHandling.OPTIONAL)
 
 WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), IdPolitica, FailureHandling.OPTIONAL)
-		
+
 WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, true, 
     FailureHandling.OPTIONAL)
 
 if (WebUI.verifyTextPresent('Solicitud automática ?', false, FailureHandling.OPTIONAL)) {
-    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'), 
-        SolicitudAuto, false)
+  
+	IngresaSolicitud_Orden ()
 
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega, 
-        FailureHandling.OPTIONAL)
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial, 
-        FailureHandling.OPTIONAL)
-
-    IngresaProducto()
-
-    WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_doc_carga_aceptar'))
-
-    WebUI.waitForPageLoad(0)
-
-	WebUI.verifyTextPresent(NroOrdenGenerado, false, FailureHandling.OPTIONAL)
-	
-	ErrorNroOrdenDuplicado()
-
-} 
-else {
+} else {
     WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
         false)
+}
+
+IngresaProducto()
+
+WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_doc_carga_aceptar'))
+
+WebUI.waitForPageLoad(0)
+
+while (WebUI.verifyTextPresent('Número de Orden Duplicado', false, FailureHandling.OPTIONAL) == true) {
+    CustomKeywords.'custom.Number_generator.randomNumber'(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
+        10, 999999)
+
+    NroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
+        'value', FailureHandling.OPTIONAL)
+
+    IngresaDireccion_viaEntrega()
+
+    WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), FailureHandling.OPTIONAL)
+
+    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), IdPolitica, FailureHandling.OPTIONAL)
+
+    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, 
+        true, FailureHandling.OPTIONAL)
+
+    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
+        false, FailureHandling.OPTIONAL)
+
+	IngresaSolicitud_Orden ()
 
     IngresaProducto()
 
     WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_doc_carga_aceptar'))
 
-    WebUI.waitForPageLoad(0)
-	
-	WebUI.verifyTextPresent(NroOrdenGenerado, false, FailureHandling.OPTIONAL)
-	
-	ErrorNroOrdenDuplicado ()
-	
-	}
+    break
+}
 
+WebUI.verifyTextPresent(NroOrdenGenerado, false)
 
-/**
+println('*******>>>>>>>>>>>>Nro del Orden:' + NroOrdenGenerado)
+
+ /**
  Método - IngresaDireccion_viaEntrega : Ingresa el ID de la 'Dirección' y ID de la 'Via de Entrega'
  1 - Hace clic en el campo 'Dirección'
  2 - Ingresa el ID de la 'Dirección'
  3 - Ingresa el ID de la 'Via de Entrega'
  4 - Hace un 'Tab' (para que se complete la Politica)
- */
-
-	/**
+ */  /**
  Método - IngresaProducto : Llena los campos que se refieren al 'Producto'
  1 - Limpia el campo Producto para que esté vacío
  2 - Ingresa el ID del Producto
@@ -113,15 +127,15 @@ else {
  4 - Ingresa Unidad
  */
 
-	/**
- Método - ErrorNroOrdenDuplicado : Trata el error por Nro de Orden duplicado
- 1 - Verifica si el error 'Número de Orden Duplicado' está presente
- 2 - Si está ingresa un nuevo Nro de Orden aleatorio
- 3 - Sigue llenando los demás campos y presiona Aceptar
+/**
+ Método - IngresaSolicitud_Orden: Llena los campos que se refieren al 'Solicitud de Entrega' y 'Orden Oficial'
+ 1 - Si está presente seleccionar una opción (Sí/No) Para Cliente Oficial
+ 2 - Llena 'Solicitud de Entrega' y 'Orden Oficial' si estan presentes
  */
-def IngresaDireccion_viaEntrega() {
-    //WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_direccion_entrega'))
 
+
+
+def IngresaDireccion_viaEntrega() {
     WebUI.click(findTestObject('Page_Detalle de rden de Carga/td_viaje_doc_carga_area_direccion_entrega'))
 
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_direccion'), IdDireccion)
@@ -133,7 +147,6 @@ def IngresaDireccion_viaEntrega() {
     WebUI.sendKeys(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_via_entrega'), Keys.chord(Keys.TAB))
 }
 
-
 def IngresaProducto() {
     WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'))
 
@@ -144,42 +157,16 @@ def IngresaProducto() {
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_unidad'), ProdUnidad)
 }
 
+def IngresaSolicitud_Orden () {
+	WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'),
+		SolicitudAuto, false, FailureHandling.OPTIONAL)
 
-def ErrorNroOrdenDuplicado() {
-    while (WebUI.verifyTextPresent('Número de Orden Duplicado', false, FailureHandling.OPTIONAL) == true) {
-        CustomKeywords.'custom.Number_generator.randomNumber'(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
-            10, 999999)
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega,
+		FailureHandling.OPTIONAL)
 
-        IngresaDireccion_viaEntrega()
-
-		WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), FailureHandling.OPTIONAL)
-		
-		WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_politica'), IdPolitica, FailureHandling.OPTIONAL)
-
-        WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, 
-            true, FailureHandling.OPTIONAL)
-
-        WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), 
-            PlantaFlete, false, FailureHandling.OPTIONAL)
-
-        WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'), 
-            SolicitudAuto, false, FailureHandling.OPTIONAL)
-
-        WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega, 
-            FailureHandling.OPTIONAL)
-
-        WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial, 
-            FailureHandling.OPTIONAL)
-
-        IngresaProducto()
-
-		def NuevoNroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 'value', FailureHandling.OPTIONAL)
-		
-		WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_doc_carga_aceptar'))
-		
-		WebUI.verifyTextPresent(NuevoNroOrdenGenerado, false)
-		
-        break
-    }
+	WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), FailureHandling.OPTIONAL)
+	
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial,
+		FailureHandling.OPTIONAL)
 }
 

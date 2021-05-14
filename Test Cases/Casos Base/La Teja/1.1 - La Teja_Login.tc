@@ -17,7 +17,7 @@
       <description></description>
       <id>2b32ca88-f698-4a04-a7ab-6142d59449cb</id>
       <masked>false</masked>
-      <name>ValidaPlanta</name>
+      <name>Planta</name>
    </variable>
    <variable>
       <defaultValue>'WEBDESA'</defaultValue>
