@@ -16,6 +16,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 /**
  Teste Case - Viaje_Doc_Carga: Crea un Documento de Carga para el viaje
@@ -45,13 +49,14 @@ WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_detall
 
 WebUI.waitForPageLoad(0)
 
-//---Genera un numero aleatorio para el campo 'Nro de Orden'
+'Genera un numero aleatorio para el campo "Nro de Orden"'
 CustomKeywords.'custom.Number_generator.randomNumber'(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
-    10, 999999)
+   10, 999999)
 
 //--- Ingresa un Nro de Orden fijo (solamente para el caso de hacer alguna prueba especifica)
 //WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), '13700')
 
+'Define la variable "NroOrdenGenerado" y guarda el "Nro de Orden"'
 def NroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
     'value')
 
@@ -65,12 +70,12 @@ WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_
 
 WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, true, 
     FailureHandling.OPTIONAL)
-
+'Ingresa CLIENTES PARTICULARES/EESS O CLIENTES OFICIALES'
+'Verifica si el campo "Solicitud Automática" está presente'
 if (WebUI.verifyTextPresent('Solicitud automática ?', false, FailureHandling.OPTIONAL)) {
-  
-	IngresaSolicitud_Orden ()
-
+    IngresaSolicitud_Orden()
 } else {
+	'Selecciona "Planta Flete" para clientes Particularesq/EESS '
     WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
         false)
 }
@@ -80,11 +85,11 @@ IngresaProducto()
 WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_doc_carga_aceptar'))
 
 WebUI.waitForPageLoad(0)
-
+'TrataERROR: Sigue ingresando "nro de orden" nuevo hasta deje de presentar el error "Numero de Orden Duplicado"'
 while (WebUI.verifyTextPresent('Número de Orden Duplicado', false, FailureHandling.OPTIONAL) == true) {
     CustomKeywords.'custom.Number_generator.randomNumber'(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
         10, 999999)
-
+	'Actualiza la varible "NroOrdenGenerado"'
     NroOrdenGenerado = WebUI.getAttribute(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_nro_orden'), 
         'value', FailureHandling.OPTIONAL)
 
@@ -100,7 +105,7 @@ while (WebUI.verifyTextPresent('Número de Orden Duplicado', false, FailureHandl
     WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
         false, FailureHandling.OPTIONAL)
 
-	IngresaSolicitud_Orden ()
+    IngresaSolicitud_Orden()
 
     IngresaProducto()
 
@@ -109,33 +114,57 @@ while (WebUI.verifyTextPresent('Número de Orden Duplicado', false, FailureHandl
     break
 }
 
-WebUI.verifyTextPresent(NroOrdenGenerado, false)
+'RECORRE TABLA "DOCUMENTO DE CARGA"'
+'Valor esperado en la tabla'
+String ExpectedValue = NroOrdenGenerado
 
-println('*******>>>>>>>>>>>>Nro del Orden:' + NroOrdenGenerado)
+WebDriver driver = DriverFactory.getWebDriver()
 
- /**
- Método - IngresaDireccion_viaEntrega : Ingresa el ID de la 'Dirección' y ID de la 'Via de Entrega'
- 1 - Hace clic en el campo 'Dirección'
- 2 - Ingresa el ID de la 'Dirección'
- 3 - Ingresa el ID de la 'Via de Entrega'
- 4 - Hace un 'Tab' (para que se complete la Politica)
- */  /**
- Método - IngresaProducto : Llena los campos que se refieren al 'Producto'
- 1 - Limpia el campo Producto para que esté vacío
- 2 - Ingresa el ID del Producto
- 3 - Ingresa la Cantidad
- 4 - Ingresa Unidad
- */
+'Se ubica la tabla'
+WebElement table = driver.findElement(By.id('W0036W0025GridContainerTbl'))
 
-/**
- Método - IngresaSolicitud_Orden: Llena los campos que se refieren al 'Solicitud de Entrega' y 'Orden Oficial'
- 1 - Si está presente seleccionar una opción (Sí/No) Para Cliente Oficial
- 2 - Llena 'Solicitud de Entrega' y 'Orden Oficial' si estan presentes
- */
+'Para ubicar filas en la tabla se captura todas las filas disponibles en un arreglo'
+List<WebElement> Rows = table.findElements(By.tagName('tr'))
+
+println('*******>>>>>>>>>>>>No. de filas: ' + Rows.size())
+
+'Busca LA COINCIDENCIA DE TEXTO "NroOrdenGenerado" para realizar una acción'
+
+'Loop permite hacer la busqueda en todas las filas de la tabla'
+table: for (int i = 0; i < Rows.size(); i++) {
+    'Se ubican las columnas de una fila especifica (se ubica la celda)'
+    List<WebElement> Cols = Rows.get(i).findElements(By.tagName('td'))
+
+    println(Rows.get(i))
+
+    println('*******>>>>>>>>>>>>No. de columnas: ' + Cols.size())
+
+    println('BUSCANDO EN LAS FILAS')
+
+    for (int j = 0; j < Cols.size(); j++) {
+        println('BUSCANDO EN LAS COLUMNAS')
+
+        'Se verifica el texto esperado celda por celda'
+        if (Cols.get(j).getText().equalsIgnoreCase(ExpectedValue)) {
+            println('BUSCANDO EN LAS CELDAS')
+
+            'Para ubicar el ancla en la fila coincidente del valor esperado para realizar la acción'
+			nrodoc = Cols.get(8).findElement(By.tagName('a')).getText()
+			println('*******>>>>>>>>>>>>Nro del Documento:' + nrodoc)
+			
+			nroorden = Cols.get(9).findElement(By.tagName('span')).getText()
+			WebUI.verifyMatch(nroorden, NroOrdenGenerado, false)
+			println('*******>>>>>>>>>>>>Nro del Orden:' + nroorden)
+
+            break
+        }
+    }
+}
 
 
 
 def IngresaDireccion_viaEntrega() {
+	'Ingresa el ID de la "Dirección" y ID de la "Via de Entrega"'
     WebUI.click(findTestObject('Page_Detalle de rden de Carga/td_viaje_doc_carga_area_direccion_entrega'))
 
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_direccion'), IdDireccion)
@@ -148,6 +177,7 @@ def IngresaDireccion_viaEntrega() {
 }
 
 def IngresaProducto() {
+	'Llena los campos que se refieren al "Producto"'
     WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'))
 
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'), IdProducto)
@@ -157,16 +187,17 @@ def IngresaProducto() {
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_unidad'), ProdUnidad)
 }
 
-def IngresaSolicitud_Orden () {
-	WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'),
-		SolicitudAuto, false, FailureHandling.OPTIONAL)
+def IngresaSolicitud_Orden() {
+	'Llena los campos que se refieren al "Solicitud de Entrega" y "Orden Oficial"'
+    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'), 
+        SolicitudAuto, false, FailureHandling.OPTIONAL)
 
-	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega,
-		FailureHandling.OPTIONAL)
+    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega, 
+        FailureHandling.OPTIONAL)
 
-	WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), FailureHandling.OPTIONAL)
-	
-	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial,
-		FailureHandling.OPTIONAL)
+    WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), FailureHandling.OPTIONAL)
+
+    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial, 
+        FailureHandling.OPTIONAL)
 }
 

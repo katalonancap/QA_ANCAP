@@ -31,11 +31,11 @@ import java.net.URLEncoder as URLEncoder
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
-
+'Ingresa a la URL informada en la variable "URLLogin"'
 WebUI.navigateToUrl(URLLogin)
 
 WebUI.waitForPageLoad(0)
-
+'Verifica que el login fue realizado en la "Planta" correcta'
 WebUI.verifyElementText(findTestObject('Page_Bienvenida al sistema/span_texto_fenplanta'), Planta)
 
 WebUI.selectOptionByValue(findTestObject('Page_Bienvenida al sistema/select_grupo_login'), SelectGrupo, true)
@@ -43,6 +43,6 @@ WebUI.selectOptionByValue(findTestObject('Page_Bienvenida al sistema/select_grup
 WebUI.click(findTestObject('Page_Bienvenida al sistema/input_btn_login'))
 
 WebUI.waitForPageLoad(0)
-
+'Verifica "Planta" después de seleccionado el perfil'
 WebUI.verifyTextPresent(Planta, false)
 

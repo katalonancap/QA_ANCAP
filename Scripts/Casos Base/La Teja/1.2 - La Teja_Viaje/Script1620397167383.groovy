@@ -33,13 +33,13 @@ WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
 
 WebUI.waitForPageLoad(0)
-
+'Verifica que está en la pantalla "Trabajar con Viajes"'
 WebUI.verifyElementText(findTestObject('Page_Trabajar con Viajes/span_txt_viaje_titulo'), 'Trabajar con Viajes')
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_viaje_btn_nuevo'))
 
 WebUI.waitForPageLoad(0)
-
+'Verifica que el campo "Fecha" ya está visible'
 WebUI.verifyElementVisible(findTestObject('Page_Trabajar con Viajes/img_calendar_viaje_fecha'))
 
 WebUI.focus(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_fecha'))
@@ -59,9 +59,9 @@ WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_conductor
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_btn_viaje_aceptar'))
 
 WebUI.waitForPageLoad(0)
-
+'Verifica que está en la pestaña "Detalle del Documento de Carga"'
 WebUI.verifyElementVisible(findTestObject('Page_Trabajar con Viajes/span_tab_viaje_documento_Carga'))
-
+'Guarda el "Nro de Viaje ANCAP" en la variable "NroViajeAncap"'
 def NroViajeAncap = WebUI.getText(findTestObject('Page_Trabajar con Viajes/span_txt_viaje_id_viaje_ancap'))
 
 println('*******>>>>>>>>>>>>Nro del Viaje ANCAP:' + NroViajeAncap)
