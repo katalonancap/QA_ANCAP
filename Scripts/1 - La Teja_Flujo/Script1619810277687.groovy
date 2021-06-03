@@ -23,5 +23,5 @@ WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.2 - La Teja_Viaje'), [:], 
 
 WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.4 - La Teja_Viaje_Doc_Carga'), [:], FailureHandling.STOP_ON_FAILURE)
 
-
+WebUI.callTestCase(findTestCase('Casos Base/La Teja/1.5 - La Teja_Viaje_Ingreso'), [:], FailureHandling.STOP_ON_FAILURE)
 

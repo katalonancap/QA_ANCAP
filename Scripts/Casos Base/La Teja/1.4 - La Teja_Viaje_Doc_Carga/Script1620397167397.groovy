@@ -126,7 +126,7 @@ WebElement table = driver.findElement(By.id('W0036W0025GridContainerTbl'))
 'Para ubicar filas en la tabla se captura todas las filas disponibles en un arreglo'
 List<WebElement> Rows = table.findElements(By.tagName('tr'))
 
-println('*******>>>>>>>>>>>>No. de filas: ' + Rows.size())
+//println('*******>>>>>>>>>>>>No. de filas: ' + Rows.size())
 
 'Busca LA COINCIDENCIA DE TEXTO "NroOrdenGenerado" para realizar una acción'
 
@@ -137,7 +137,7 @@ table: for (int i = 0; i < Rows.size(); i++) {
 
     println(Rows.get(i))
 
-    println('*******>>>>>>>>>>>>No. de columnas: ' + Cols.size())
+    //println('*******>>>>>>>>>>>>No. de columnas: ' + Cols.size())
 
     println('BUSCANDO EN LAS FILAS')
 
@@ -149,13 +149,16 @@ table: for (int i = 0; i < Rows.size(); i++) {
             println('BUSCANDO EN LAS CELDAS')
 
             'Para ubicar el ancla en la fila coincidente del valor esperado para realizar la acción'
-			nrodoc = Cols.get(8).findElement(By.tagName('a')).getText()
-			println('*******>>>>>>>>>>>>Nro del Documento:' + nrodoc)
+			nroordentb = Cols.get(j).findElement(By.tagName('span')).getText()
+			WebUI.verifyMatch(nroordentb, ExpectedValue, false)
 			
-			nroorden = Cols.get(9).findElement(By.tagName('span')).getText()
-			WebUI.verifyMatch(nroorden, NroOrdenGenerado, false)
-			println('*******>>>>>>>>>>>>Nro del Orden:' + nroorden)
-
+			nrodoctb = Cols.get(j - 1).findElement(By.tagName('a')).getText()
+			println('*******>>>>>>>>>>>>NRO DEL DOCUMENTO:' + nrodoctb)
+			
+			println('*******>>>>>>>>>>>>NRO DEL ORDEN:' + nroordentb)
+			
+			println ()
+			
             break
         }
     }
