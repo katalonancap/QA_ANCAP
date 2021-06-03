@@ -65,7 +65,7 @@ asociaviaje()
 'Vuelve a la pantalla base'
 WebUI.switchToDefaultContent()
 
-WebUI.waitForPageLoad(0)
+WebUI.delay(10)
 
 WebUI.click(findTestObject('Page_Ingreso/input_btn_viaje_ingreso_acreditar'))
 
@@ -104,11 +104,15 @@ WebUI.verifyElementText(findTestObject('Page_Verificacion/span_txt_viaje_ingreso
 
 WebUI.click(findTestObject('Page_Verificacion/input_btn_viaje_ingreso_aprobar'))
 
+WebUI.waitForPageLoad(0)
+
 WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_ctrl_egreso'))
 
 WebUI.verifyElementText(findTestObject('Page_Controles Egreso/span_txt_viaje_ingreso_ctrl_egreso_estado'), 'Verificado')
 
 WebUI.click(findTestObject('Page_Controles Egreso/input_btn_viaje_ingreso_ctrl_egreso_aceptar'))
+
+WebUI.waitForPageLoad(0)
 
 WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_egreso'))
 
