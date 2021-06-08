@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_Trabajar con Viaje</name>
+   <name>input_Seleccione un Grupo_BTNLOGIN</name>
    <tag></tag>
-   <elementGuidId>2388c087-721c-486d-a182-b7c947283c7f</elementGuidId>
+   <elementGuidId>01492719-2d0e-4b75-9395-f982312d31bb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id='cmSubMenuID18Table']/tbody/tr[3]/td[2]</value>
+         <value>//input[@name='BTNLOGIN']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
+         <value>input[name=&quot;BTNLOGIN&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,76 +21,83 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>input</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>BTNLOGIN</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>value</name>
+      <type>Main</type>
+      <value>Ingresar</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Ingresar</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>ThemeClassicMenuItemText</value>
+      <value>BtnText</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>onclick</name>
       <type>Main</type>
-      <value>Trabajar con Viaje</value>
+      <value>if( gx.evt.jsEvent(this)) {gx.evt.execEvt('E\'LOGIN\'.',this);} else return false;</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onfocus</name>
+      <type>Main</type>
+      <value>gx.evt.onfocus(this, 37,'',false,'',0)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;cmSubMenuID18Table&quot;)/tbody[1]/tr[@class=&quot;ThemeClassicMenuItem&quot;]/td[@class=&quot;ThemeClassicMenuItemText&quot;]</value>
+      <value>id(&quot;TBLSELECCIONGRUPO&quot;)/tbody[1]/tr[2]/td[2]/span[@class=&quot;BaseRBtn RButton&quot;]/span[@class=&quot;BtnLeft&quot;]/span[@class=&quot;BtnRight&quot;]/span[@class=&quot;BtnBackground&quot;]/input[@class=&quot;BtnText&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//input[@name='BTNLOGIN']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='cmSubMenuID18Table']/tbody/tr[3]/td[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Trabajar con Ingreso'])[1]/following::td[3]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='INGRESO'])[1]/following::td[6]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Consulta Ingreso'])[1]/preceding::td[3]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='T/C Viaje de Portland'])[1]/preceding::td[6]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Trabajar con Viaje']/parent::*</value>
+      <value>//table[@id='TBLSELECCIONGRUPO']/tbody/tr[2]/td[2]/span/span/span/span/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[18]/table/tbody/tr[3]/td[2]</value>
+      <value>//input</value>
    </webElementXpaths>
 </WebElementEntity>

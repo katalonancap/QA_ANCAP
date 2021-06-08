@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_viaje_btn_nuevo</name>
+   <name>iframe_form_viaje_ingreso_emitir_comprobante</name>
    <tag></tag>
-   <elementGuidId>6bf50ed3-a8bf-495d-8111-38748062b4b3</elementGuidId>
+   <elementGuidId>632d8b64-9d35-4ef1-a1e3-9733a93f6489</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='INSERT']</value>
+         <value>//iframe[@id='gxp0_ifrm']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#INSERT</value>
+         <value>#gxp0_ifrm</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,90 +21,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>image</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>/cdcpro/static/Resources/K2B/K2BActionInsert.png</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>INSERT</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>onclick</name>
-      <type>Main</type>
-      <value>if( gx.evt.jsEvent(this)) {gx.evt.execEvt('E\'DOINSERT\'.',this);return false;} else return false;</value>
+      <value>iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>INSERT</value>
+      <value>gxp0_ifrm</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>src</name>
       <type>Main</type>
-      <value>Nuevo (F2)</value>
+      <value>http://informat:8190/cdcpro/servlet/emitircomprobante?1822380,1724304,,gxPopupLevel%3D0%3B</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>width</name>
       <type>Main</type>
-      <value>Image_Action</value>
+      <value>100%</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onfocus</name>
+      <name>height</name>
       <type>Main</type>
-      <value>gx.evt.onfocus(this, 34,'',false,'',0)</value>
+      <value>100%</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>frameborder</name>
+      <type>Main</type>
+      <value>0</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>scrolling</name>
+      <type>Main</type>
+      <value>off</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;INSERT&quot;)</value>
+      <value>id(&quot;gxp0_ifrm&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='INSERT']</value>
+      <value>//iframe[@id='gxp0_ifrm']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='K2BTABLEACTIONSRIGHTCONTAINER']/tbody/tr/td/input[2]</value>
+      <value>//div[@id='gxp0_c']/iframe</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//input[2]</value>
+      <value>//iframe</value>
    </webElementXpaths>
 </WebElementEntity>

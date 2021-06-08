@@ -155,7 +155,7 @@ table: for (int i = 0; i < Rows.size(); i++) {
 			nrodoctb = Cols.get(j - 1).findElement(By.tagName('a')).getText()
 			println('*******>>>>>>>>>>>>NRO DEL DOCUMENTO:' + nrodoctb)
 			
-			println('*******>>>>>>>>>>>>NRO DEL ORDEN:' + nroordentb)
+			println('*******>>>>>>>>>>>>NRO DE ORDEN:' + nroordentb)
 			
 			println ()
 			

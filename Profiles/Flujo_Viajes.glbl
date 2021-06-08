@@ -9,4 +9,14 @@
       <initValue>''</initValue>
       <name>NroViajeAncap</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>IdCamionGlob</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>DocConductGlob</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

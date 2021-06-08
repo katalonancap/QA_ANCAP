@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_plantas</name>
+   <name>span_btn_viaje_filtro_buscar</name>
    <tag></tag>
-   <elementGuidId>f2a9e72d-5367-4059-ba3d-73861595794a</elementGuidId>
+   <elementGuidId>fbf35d55-c4a0-4928-a3e0-5a572e32381a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='Jscookmenu1']/table/tbody/tr/td[15]/span[2]</value>
+         <value>//table[@id='K2BTABLEFILTERSCONTAINER']/tbody/tr/td[2]/span/span</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>td.ThemeClassicMainItemHover > span.ThemeClassicMainFolderText</value>
+         <value>span.BtnLeft</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,55 +28,55 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>ThemeClassicMainFolderText</value>
+      <value>BtnLeft</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>plantas</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;Jscookmenu1&quot;)/table[@class=&quot;ThemeClassicMenu&quot;]/tbody[1]/tr[1]/td[@class=&quot;ThemeClassicMainItemHover&quot;]/span[@class=&quot;ThemeClassicMainFolderText&quot;]</value>
+      <value>id(&quot;K2BTABLEFILTERSCONTAINER&quot;)/tbody[1]/tr[1]/td[2]/span[@class=&quot;BaseRBtn RButton_Standard&quot;]/span[@class=&quot;BtnLeft&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='Jscookmenu1']/table/tbody/tr/td[15]/span[2]</value>
+      <value>//table[@id='K2BTABLEFILTERSCONTAINER']/tbody/tr/td[2]/span/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='ajuste'])[1]/following::span[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Asignado'])[1]/following::span[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facturación Electrónica'])[1]/preceding::span[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mostrar Anulados'])[1]/following::span[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='plantas']/parent::*</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Viaje'])[2]/preceding::span[3]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Nro. de Viaje'])[1]/preceding::span[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[15]/span[2]</value>
+      <value>//span/span</value>
    </webElementXpaths>
 </WebElementEntity>

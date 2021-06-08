@@ -36,7 +36,7 @@ WebUI.waitForPageLoad(0)
 'Verifica que está en la pantalla "Trabajar con Viajes"'
 WebUI.verifyElementText(findTestObject('Page_Trabajar con Viajes/span_txt_viaje_titulo_trab_viaje'), 'Trabajar con Viajes')
 
-WebUI.click(findTestObject('Page_Trabajar con Viajes/input_viaje_btn_nuevo'))
+WebUI.click(findTestObject('Page_Trabajar con Viajes/input_btn_viaje_nuevo'))
 
 WebUI.waitForPageLoad(0)
 'Verifica que el campo "Fecha" ya está visible'
@@ -54,7 +54,13 @@ WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_cliente_o
 
 WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_camion'), IdCamion)
 
+'Guarda el "IdCamion" en la variable "IdCamionGlob"'
+GlobalVariable.IdCamionGlob = IdCamion
+
 WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_conductor'), DocConductor)
+
+'Guarda el "DocConductor" en la variable "DocConductGlob"'
+GlobalVariable.DocConductGlob = DocConductor
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/input_btn_viaje_aceptar'))
 

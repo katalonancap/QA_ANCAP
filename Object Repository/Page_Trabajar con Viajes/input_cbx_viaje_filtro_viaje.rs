@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_cbx_viaje_ingreso_comprob_obs</name>
+   <name>input_cbx_viaje_filtro_viaje</name>
    <tag></tag>
-   <elementGuidId>4a8fe723-f16c-412e-9835-8b63c68ae0f6</elementGuidId>
+   <elementGuidId>4492135c-54ff-4610-8e6c-fd6624189031</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='vOBSERVACIONES']</value>
+         <value>//input[@id='vFILTERVIAJE']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#vOBSERVACIONES</value>
+         <value>#vFILTERVIAJE</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -35,42 +35,49 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>vOBSERVACIONES</value>
+      <value>vFILTERVIAJE</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>vOBSERVACIONES</value>
+      <value>vFILTERVIAJE</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>value</name>
+      <type>Main</type>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>size</name>
       <type>Main</type>
-      <value>80</value>
+      <value>10</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>maxlength</name>
       <type>Main</type>
-      <value>100</value>
+      <value>10</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>Attribute_Trn</value>
+      <value>Attribute_Filter</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>onfocus</name>
       <type>Main</type>
-      <value>gx.evt.onfocus(this, 35,'',false,'',0)</value>
+      <value>gx.evt.onfocus(this, 122,'',false,'0001',0)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -84,34 +91,34 @@
       <matchCondition>equals</matchCondition>
       <name>onblur</name>
       <type>Main</type>
-      <value>;gx.evt.onblur(35);</value>
+      <value>gx.num.valid_integer( this,'.');;gx.evt.onblur(122);</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;vOBSERVACIONES&quot;)</value>
+      <value>id(&quot;vFILTERVIAJE&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='vOBSERVACIONES']</value>
+      <value>//input[@id='vFILTERVIAJE']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='TABLE6']/tbody/tr/td[2]/input</value>
+      <value>//table[@id='TABLE1']/tbody/tr[2]/td[4]/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//input</value>
+      <value>//td[4]/input</value>
    </webElementXpaths>
 </WebElementEntity>
