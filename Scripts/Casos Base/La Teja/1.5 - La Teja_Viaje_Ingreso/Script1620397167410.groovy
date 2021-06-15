@@ -23,15 +23,21 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 /**
  Teste Case - Viaje_Ingreso: Ingresa el camión a la planta
- 1   - Ingresa a la pantalla 'Trabajar con Ingreso' 
+ 1   - Ingresa a la pantalla 'Trabajar con Ingreso'
  2   - Presiona el botón 'Nuevo Ingreso'
  3   - Ingresa Camión y Conductor ya grabados en las 'variables Globales'
  4   - Invoca el método 'validaviajeagenda()'
  5   - Ingresa a 'Control de Ingreso' y selecciona las opciones
- 6   - Ingresar a 'Asociar Viaje' (ejecuta en el iframe)
+ 6   - Ingresar a 'Asociar Viaje' (ejecuta en iframe)
  7   - Invoca el método 'asociaviaje()'
  8   - Presiona el botón 'Acreditar'
  9   - Ingresa a 'Cargadero' y escribe la temperatura y presionar el botón 'Cantidad Pedida'
+ 10  - Ingresa a 'Liquidación'
+ 11  - Presiona el botón 'Emitir Comprobantes' (ejecutar en iframe)
+ 12  - Ingresa a 'Verificación' y presiona 'aceptar'
+ 13  - Ingresa a 'Egreso'
+ 14  - En 'Trabajar con viaje' busca el viaje en el filtro
+ 15  - Invoca el método 'validaviajefinalizado()'
  */
 /**
 4   - Invoca el método 'validaviajeagenda()'
@@ -44,6 +50,13 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
  7.2 - Identifica el nro del viaje (Nro de viaje está grabado en la variable global)
  7.3 - Hace clic en el botón 'Asociar' del viaje identificado
  */
+/**
+ 15   - Invoca el método 'validaviajefinalizado()'
+ 15.1 - Recorre la tabla 'Trabajar con Viajes'
+ 15.2 - Identifica el viaje creado y ingresado
+ 15.3 - Imprime el Número y el Estado del viaje (debe estar Finalizado)
+ */
+
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_ingreso'))

@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>b584166d-9def-438b-b5e7-904b1dfd27b0</testCaseGuid>
    <variable>
-      <defaultValue>'http://fenplanta1:inicio@informat:8190/cdcpro/servlet/hlogin'</defaultValue>
+      <defaultValue>'http://fenplanta1:inicio@informat:8190/cdcqasn/servlet/hlogin'</defaultValue>
       <description></description>
       <id>3b7a5001-2fc8-454b-9f88-2b42389ed050</id>
       <masked>false</masked>
