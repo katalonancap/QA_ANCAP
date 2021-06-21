@@ -31,6 +31,18 @@ import java.util.Date;
 class execution_listeners {
 	
 	/**
+	 * Executes before every test case starts.
+	 * @param testCaseContext related information of the executed test case.
+	 Actualiza variable para escribir resultados del test en el EXCEL (i se refiere a cada fila)
+	 */ 
+	@BeforeTestCase
+	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+		//println testCaseContext.getTestCaseId()
+		//println testCaseContext.getTestCaseVariables()
+		GlobalVariable.i=GlobalVariable.i+1
+	} 
+	
+	/**
 	 * Executes after every test case ends.
 	 * @param testCaseContext related information of the executed test case.
 	 */
@@ -46,7 +58,13 @@ class execution_listeners {
 	 */
 	@AfterTestCase
 	
-	def tearDownTestCase(TestCaseContext testCaseContext) {
+	/**
+	def sampleAfterTestCase(TestCaseContext testCaseContext) {
+	
+	}
+	*/
+	
+	def tearDownTestCase(TestCaseContext testCaseContext) {		
 		def testCaseStatus = testCaseContext.getTestCaseStatus();
 		if(testCaseStatus.equals('FAILED')) {
 		System.out.println("Test case is FAILED")
@@ -54,7 +72,7 @@ class execution_listeners {
 		try {
 				Date data = new Date(System.currentTimeMillis())
 				SimpleDateFormat formatarDate = new SimpleDateFormat('yyyyMMdd_HHmmss')
-				WebUI.takeScreenshot(('C:\\Katalon\\Screenshots\\Screenshot_' + formatarDate.format(data)) + '.png')
+				WebUI.takeScreenshot(('C:\\Users\\Usuario\\git\\QA_ANCAP\\Screenshots\\Errores\\Screenshot_' + formatarDate.format(data)) + '.png')
 				}catch (Exception e) {    e.printStackTrace()}
 				
 				//WebUI.closeBrowser()
@@ -66,7 +84,7 @@ class execution_listeners {
 			try {
 					Date data = new Date(System.currentTimeMillis())
 					SimpleDateFormat formatarDate = new SimpleDateFormat('yyyyMMdd_HHmmss')
-					WebUI.takeScreenshot(('C:\\Katalon\\Screenshots\\Screenshot_' + formatarDate.format(data)) + '.png')
+					WebUI.takeScreenshot(('C:\\Users\\Usuario\\git\\QA_ANCAP\\Screenshots\\Errores\\Screenshot_' + formatarDate.format(data)) + '.png')
 					}catch (Exception e) {    e.printStackTrace()}
 					
 					//WebUI.closeBrowser()
@@ -75,16 +93,12 @@ class execution_listeners {
 				
 			System.out.println("Test case SUCCESSFUL")
 		}
+	//CustomKeywords.'custom.Write_Excel.writeExcel'(testCaseContext.getTestCaseId(), GlobalVariable.i)
+	CustomKeywords.'custom.Write_Excel.writeExcel'(GlobalVariable.NroViajeAncap, GlobalVariable.i)
+	CustomKeywords.'custom.Write_Excel.writeExcel'(testCaseContext.getTestCaseStatus(), GlobalVariable.i)
 	}
 
-	/**
-	 * Executes before every test case starts.
-	 * @param testCaseContext related information of the executed test case.
-	@BeforeTestCase
-	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		println testCaseContext.getTestCaseVariables()
-	} */
+	 
 	
 	/**
 	 * Executes before every test suite starts.

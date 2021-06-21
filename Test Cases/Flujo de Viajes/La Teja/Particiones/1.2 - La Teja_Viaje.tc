@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1.2 - La Teja_Viaje</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>122c93a5-3ef9-4053-b905-9f0d107d3819</testCaseGuid>
+   <variable>
+      <defaultValue>'130621'</defaultValue>
+      <description></description>
+      <id>f2a72333-b245-48ad-8122-ed378d7e83ae</id>
+      <masked>false</masked>
+      <name>FechaViaje</name>
+   </variable>
+   <variable>
+      <defaultValue>'14'</defaultValue>
+      <description></description>
+      <id>8615c8fe-7bdb-4d40-877d-bde31c0e0e06</id>
+      <masked>false</masked>
+      <name>IdDistribuidor</name>
+   </variable>
+   <variable>
+      <defaultValue>'10'</defaultValue>
+      <description></description>
+      <id>2e30e992-1efa-41ae-a8eb-d8c039404a39</id>
+      <masked>false</masked>
+      <name>IdCamion</name>
+   </variable>
+   <variable>
+      <defaultValue>'11111111'</defaultValue>
+      <description></description>
+      <id>efa98f5a-a021-4293-bda2-9619f0b5735f</id>
+      <masked>false</masked>
+      <name>DocConductor</name>
+   </variable>
+</TestCaseEntity>
