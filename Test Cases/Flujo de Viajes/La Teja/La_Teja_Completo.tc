@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>La_Teja_Ejecucion</name>
+   <name>La_Teja_Completo</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>acdd546f-62e0-47d7-8aef-784ada9090f3</testCaseGuid>
@@ -164,6 +164,13 @@
       <description></description>
       <id>b6dd5911-9a01-4cf7-bcef-a5ae856b6fb3</id>
       <masked>false</masked>
-      <name>ProdTemperatura</name>
+      <name>ProdTempCargad</name>
+   </variable>
+   <variable>
+      <defaultValue>'14'</defaultValue>
+      <description></description>
+      <id>c40e62c9-7c0a-4a3b-b39e-bc277a1b57d3</id>
+      <masked>false</masked>
+      <name>ProdTempLiquid</name>
    </variable>
 </TestCaseEntity>

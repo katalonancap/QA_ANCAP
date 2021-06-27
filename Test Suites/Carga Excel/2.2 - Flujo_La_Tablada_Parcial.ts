@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>3 - Flujo_Paysandu</name>
+   <name>2.2 - Flujo_La_Tablada_Parcial</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,5 +10,5 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>cc9833e1-ee76-44a6-bf84-0db3548f5ec8</testSuiteGuid>
+   <testSuiteGuid>4bc227db-d67a-401f-a848-a73d8017c020</testSuiteGuid>
 </TestSuiteEntity>

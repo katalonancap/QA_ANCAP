@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>1 - Flujo_La_Teja</name>
+   <name>1.2 - Flujo_La_Teja_Parcial</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,158 +10,134 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>9bc2710f-9e8f-41b1-9293-ae2689e32a96</testSuiteGuid>
+   <testSuiteGuid>076e23df-b9e3-4ce9-be83-2cadd4151f7c</testSuiteGuid>
    <testCaseLink>
-      <guid>5ec3b3a6-381c-4128-bcc6-41c998f76f2b</guid>
+      <guid>240cea58-daa0-4e34-9810-58d4fbc2663d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Flujo de Viajes/La Teja/La_Teja_Ejecucion</testCaseId>
+      <testCaseId>Test Cases/Flujo de Viajes/La Teja/La_Teja_Parcial</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>50b407ba-4b49-4fb1-9225-4614cd593937</id>
+         <id>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>2-2</value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>6</value>
          </iterationEntity>
          <testDataId>Data Files/Datos Ingreso Viaje</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>URLLogin</value>
          <variableId>d244bb88-b00a-414b-aae8-144091563757</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>Planta</value>
          <variableId>007c9a10-59a7-47f1-8d79-f4956f305dfa</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>SelectGrupo</value>
          <variableId>c313443e-8331-4477-a5d5-90d435b9da9a</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>FechaViaje</value>
          <variableId>da39b9f1-3e4f-48c5-952a-de9a394d5d3f</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdDistribuidor</value>
          <variableId>c7b74020-d80e-49b1-86ed-dea00f632da6</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdCamion</value>
          <variableId>043cf36a-ed4b-447f-91c8-fdf4c911d630</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>DocConductor</value>
          <variableId>f95be664-7413-4ae1-b5ca-249715ff3cfa</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdCliente</value>
          <variableId>6aecc4c0-9b2e-488f-b6d1-85b77eadf5c5</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdDireccion</value>
          <variableId>ae80761f-b0b3-4457-84a4-5bcf0f7ceee6</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdViaEntrega</value>
          <variableId>c113fae6-5f86-4184-8ebf-778b891dd7c9</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>Negocio</value>
          <variableId>8038f0e5-2a20-4f93-8999-fbb3e9b0b7ee</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdPolitica</value>
          <variableId>64cdc8a5-14bb-4472-8429-02977a074616</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>PlantaFlete</value>
          <variableId>48b95d43-a59f-4810-8109-e37a4075794b</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>IdProducto</value>
          <variableId>dbcbcbf9-e21e-41e3-86c7-716db5b79c56</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>ProdCantidad</value>
          <variableId>869fcd27-03b5-4c3f-9806-01c3df745913</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>ProdUnidad</value>
          <variableId>c4743fb7-c466-4e48-a06e-72c7a91566b9</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>OrdenOficial</value>
          <variableId>7237a1d3-cb4b-4459-bd53-afe52961e2ab</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>SolicitudAuto</value>
          <variableId>50d76476-f496-4450-86ea-d4a802e783ed</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
+         <testDataLinkId>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>SolicitudEntrega</value>
          <variableId>53355faa-7b6b-4482-a79a-ee3eed009c8a</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>AptoIngreso</value>
-         <variableId>0309a2fc-ff13-4884-be3f-b5b7171c8116</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>ProdTransito</value>
-         <variableId>43604f53-8f31-403a-8697-1afb51118e2b</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>ProdTemperatura</value>
-         <variableId>b6dd5911-9a01-4cf7-bcef-a5ae856b6fb3</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>50b407ba-4b49-4fb1-9225-4614cd593937</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>PFleteAcredita</value>
-         <variableId>f765ec88-113d-4329-b98d-1c30925c7a43</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

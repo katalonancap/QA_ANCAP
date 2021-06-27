@@ -121,15 +121,16 @@ WebUI.switchToDefaultContent(FailureHandling.OPTIONAL)
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_cargadero'))
+WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_cargadero'), FailureHandling.OPTIONAL)
 
-WebUI.verifyElementText(findTestObject('Page_Carga  Descarga/span_txt_viaje_ingreso_titulo_cargadero'), 'Carga / Descarga')
+WebUI.verifyElementText(findTestObject('Page_Carga  Descarga/span_txt_viaje_ingreso_titulo_cargadero'), 'Carga / Descarga', 
+    FailureHandling.OPTIONAL)
 
-WebUI.setText(findTestObject('Page_Carga  Descarga/input_cbx_viaje_ingreso_carga_prd_temp'), ProdTemperatura)
+WebUI.setText(findTestObject('Page_Carga  Descarga/input_cbx_viaje_ingreso_carga_prd_temp'), ProdTempCargad, FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Page_Carga  Descarga/input_btn_viaje_ingreso_carga_cantidad_pedida'))
+WebUI.click(findTestObject('Page_Carga  Descarga/input_btn_viaje_ingreso_carga_cantidad_pedida'), FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Page_Carga  Descarga/input_btn_viaje_ingreso_carga_finalizar'))
+WebUI.click(findTestObject('Page_Carga  Descarga/input_btn_viaje_ingreso_carga_finalizar'), FailureHandling.OPTIONAL)
 
 WebUI.delay(5)
 
@@ -137,7 +138,11 @@ WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_liquidacion'))
 
 WebUI.verifyElementText(findTestObject('Page_Liquidacin/span_txt_viaje_ingreso_titulo_liquidacion'), 'Liquidación')
 
-WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liq_finalizar'))
+WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_prd_temp'), ProdTempLiquid)
+
+WebUI.click(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_cantidad_pedida'))
+
+WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
 
 WebUI.delay(5)
 

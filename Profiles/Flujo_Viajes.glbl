@@ -22,6 +22,6 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>0</initValue>
-      <name>i</name>
+      <name>FilasExcel</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

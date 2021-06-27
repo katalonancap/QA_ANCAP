@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>1.5 - La Teja_Viaje_Ingreso</name>
+   <name>1.4 - La Teja_Viaje_Ingreso</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>5798a25a-0eb8-440d-a62a-434f0248e774</testCaseGuid>
@@ -20,10 +20,24 @@
       <name>ProdTransito</name>
    </variable>
    <variable>
+      <defaultValue>'LA TEJA'</defaultValue>
+      <description></description>
+      <id>52850a40-68e5-4c16-9654-bf81565ef400</id>
+      <masked>false</masked>
+      <name>PFleteAcredita</name>
+   </variable>
+   <variable>
       <defaultValue>'16'</defaultValue>
       <description></description>
-      <id>7041fb12-ee74-453a-b971-e23b3f678bbb</id>
+      <id>b6dd5911-9a01-4cf7-bcef-a5ae856b6fb3</id>
       <masked>false</masked>
-      <name>ProdTemperatura</name>
+      <name>ProdTempCargad</name>
+   </variable>
+   <variable>
+      <defaultValue>'14'</defaultValue>
+      <description></description>
+      <id>c40e62c9-7c0a-4a3b-b39e-bc277a1b57d3</id>
+      <masked>false</masked>
+      <name>ProdTempLiquid</name>
    </variable>
 </TestCaseEntity>

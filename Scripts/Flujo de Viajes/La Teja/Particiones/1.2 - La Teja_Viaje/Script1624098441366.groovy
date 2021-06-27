@@ -28,6 +28,10 @@ import org.openqa.selenium.Keys as Keys
  7   - Presiona el botón 'Aceptar'
  8   - Verifica que está en la pestaña 'Detalle Documento de Carga'
  */
+
+'CREA VIAJE'
+
+'Hace clic en el menú'
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
@@ -73,3 +77,4 @@ GlobalVariable.NroViajeAncap = WebUI.getText(findTestObject('Page_Trabajar con V
 println('*******>>>>>>>>>>>>NRO DEL VIAJE ANCAP:' + GlobalVariable.NroViajeAncap)
 
 println ()
+

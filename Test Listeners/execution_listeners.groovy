@@ -39,7 +39,7 @@ class execution_listeners {
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 		//println testCaseContext.getTestCaseId()
 		//println testCaseContext.getTestCaseVariables()
-		GlobalVariable.i=GlobalVariable.i+1
+		GlobalVariable.FilasExcel=GlobalVariable.FilasExcel+1
 	} 
 	
 	/**
@@ -94,8 +94,8 @@ class execution_listeners {
 			System.out.println("Test case SUCCESSFUL")
 		}
 	//CustomKeywords.'custom.Write_Excel.writeExcel'(testCaseContext.getTestCaseId(), GlobalVariable.i)
-	CustomKeywords.'custom.Write_Excel.writeExcel'(GlobalVariable.NroViajeAncap, GlobalVariable.i)
-	CustomKeywords.'custom.Write_Excel.writeExcel'(testCaseContext.getTestCaseStatus(), GlobalVariable.i)
+	CustomKeywords.'custom.Write_Excel.writeExcel'(GlobalVariable.NroViajeAncap, GlobalVariable.FilasExcel)
+	CustomKeywords.'custom.Write_Excel.writeExcel'(testCaseContext.getTestCaseStatus(), GlobalVariable.FilasExcel)
 	}
 
 	 
