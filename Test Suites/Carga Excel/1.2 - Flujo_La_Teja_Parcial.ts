@@ -20,8 +20,8 @@
          <combinationType>ONE</combinationType>
          <id>f72a7c2e-d827-44d6-bdab-72ff190d6fd7</id>
          <iterationEntity>
-            <iterationType>SPECIFIC</iterationType>
-            <value>6</value>
+            <iterationType>ALL</iterationType>
+            <value>1</value>
          </iterationEntity>
          <testDataId>Data Files/Datos Ingreso Viaje</testDataId>
       </testDataLink>

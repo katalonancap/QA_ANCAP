@@ -43,6 +43,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
  2 - Si está ingresa un nuevo Nro de Orden aleatorio
  3 - Sigue llenando los demás campos y presiona Aceptar
  */
+'Verifica que está en la pestañ "Detalle de Documentos de Carga '
 WebUI.verifyTextPresent('Detalle de Documentos de Carga del viaje', false)
 
 WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_detalle_doc_carga_nuevo'))
@@ -70,14 +71,12 @@ WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_
 WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, true, 
     FailureHandling.OPTIONAL)
 
+'Selecciona "Planta Flete" para clientes Particularesq/EESS '
+WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete,
+	false, FailureHandling.OPTIONAL)
+
 'Ingresa CLIENTES PARTICULARES/EESS O CLIENTES OFICIALES'
-if (WebUI.verifyTextPresent('Solicitud automática ?', false, FailureHandling.OPTIONAL)) {
     IngresaSolicitud_Orden()
-} else {
-    'Selecciona "Planta Flete" para clientes Particularesq/EESS '
-    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
-        false, FailureHandling.OPTIONAL)
-}
 
 IngresaProducto()
 
@@ -199,4 +198,3 @@ def IngresaSolicitud_Orden() {
     WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial, 
         FailureHandling.OPTIONAL)
 }
-

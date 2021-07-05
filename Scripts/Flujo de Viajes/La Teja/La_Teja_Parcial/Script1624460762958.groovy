@@ -137,14 +137,12 @@ WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_
 WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, true, 
     FailureHandling.OPTIONAL)
 
+'Selecciona "Planta Flete" para clientes Particularesq/EESS '
+WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete,
+	false, FailureHandling.OPTIONAL)
+
 'Ingresa CLIENTES PARTICULARES/EESS O CLIENTES OFICIALES'
-if (WebUI.verifyTextPresent('Solicitud automática ?', false, FailureHandling.OPTIONAL)) {
     IngresaSolicitud_Orden()
-} else {
-    'Selecciona "Planta Flete" para clientes Particularesq/EESS '
-    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
-        false, FailureHandling.OPTIONAL)
-}
 
 IngresaProducto()
 

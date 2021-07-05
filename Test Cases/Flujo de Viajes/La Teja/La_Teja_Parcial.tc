@@ -27,7 +27,7 @@
       <name>SelectGrupo</name>
    </variable>
    <variable>
-      <defaultValue>'180621'</defaultValue>
+      <defaultValue>'280621'</defaultValue>
       <description></description>
       <id>da39b9f1-3e4f-48c5-952a-de9a394d5d3f</id>
       <masked>false</masked>
@@ -41,21 +41,21 @@
       <name>IdDistribuidor</name>
    </variable>
    <variable>
-      <defaultValue>'10'</defaultValue>
+      <defaultValue>'13834'</defaultValue>
       <description></description>
       <id>043cf36a-ed4b-447f-91c8-fdf4c911d630</id>
       <masked>false</masked>
       <name>IdCamion</name>
    </variable>
    <variable>
-      <defaultValue>'11111111'</defaultValue>
+      <defaultValue>'41744657'</defaultValue>
       <description></description>
       <id>f95be664-7413-4ae1-b5ca-249715ff3cfa</id>
       <masked>false</masked>
       <name>DocConductor</name>
    </variable>
    <variable>
-      <defaultValue>'6252003'</defaultValue>
+      <defaultValue>'8000492'</defaultValue>
       <description></description>
       <id>6aecc4c0-9b2e-488f-b6d1-85b77eadf5c5</id>
       <masked>false</masked>
@@ -69,14 +69,14 @@
       <name>IdDireccion</name>
    </variable>
    <variable>
-      <defaultValue>'22'</defaultValue>
+      <defaultValue>'11'</defaultValue>
       <description></description>
       <id>c113fae6-5f86-4184-8ebf-778b891dd7c9</id>
       <masked>false</masked>
       <name>IdViaEntrega</name>
    </variable>
    <variable>
-      <defaultValue>'ASFALTOS OFICIALES 2'</defaultValue>
+      <defaultValue>'TRANSFERENCIAS INTER PLANTA'</defaultValue>
       <description></description>
       <id>8038f0e5-2a20-4f93-8999-fbb3e9b0b7ee</id>
       <masked>false</masked>
@@ -97,14 +97,14 @@
       <name>PlantaFlete</name>
    </variable>
    <variable>
-      <defaultValue>'40013'</defaultValue>
+      <defaultValue>'30017'</defaultValue>
       <description></description>
       <id>dbcbcbf9-e21e-41e3-86c7-716db5b79c56</id>
       <masked>false</masked>
       <name>IdProducto</name>
    </variable>
    <variable>
-      <defaultValue>'1000'</defaultValue>
+      <defaultValue>'800'</defaultValue>
       <description></description>
       <id>869fcd27-03b5-4c3f-9806-01c3df745913</id>
       <masked>false</masked>
@@ -118,7 +118,7 @@
       <name>ProdUnidad</name>
    </variable>
    <variable>
-      <defaultValue>'102090'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>7237a1d3-cb4b-4459-bd53-afe52961e2ab</id>
       <masked>false</masked>

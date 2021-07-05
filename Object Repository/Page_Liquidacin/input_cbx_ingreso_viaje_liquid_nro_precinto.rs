@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Horario Tarde_ACEPTAR</name>
+   <name>input_cbx_ingreso_viaje_liquid_nro_precinto</name>
    <tag></tag>
-   <elementGuidId>d9376767-2b38-4f67-86e9-370d2b6c2586</elementGuidId>
+   <elementGuidId>7d580037-da69-4659-85ca-7b3f914455fe</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>input[name=&quot;ACEPTAR&quot;]</value>
+         <value>#PTONRO_0001</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name='ACEPTAR']</value>
+         <value>//input[@id='PTONRO_0001']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,69 +28,111 @@
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>button</value>
+      <value>text</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>PTONRO_0001</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>ACEPTAR</value>
+      <value>PTONRO_0001</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Aceptar</value>
+      <value>0</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>size</name>
+      <type>Main</type>
+      <value>12</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>spellcheck</name>
+      <type>Main</type>
+      <value>false</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>maxlength</name>
+      <type>Main</type>
+      <value>12</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>BtnText</value>
+      <value>Attribute_Grid</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onclick</name>
+      <name>gxoch1</name>
       <type>Main</type>
-      <value>if( gx.evt.jsEvent(this)) {gx.evt.setGridEvt(92,null);gx.evt.execEvt('E\'E_ACEPTAR\'.',this);} else return false;</value>
+      <value>gx.fn.setControlValue('nIsMod_256_0001',1);</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>onfocus</name>
       <type>Main</type>
-      <value>gx.evt.onfocus(this, 126,'',false,'',0)</value>
+      <value>gx.evt.onfocus(this, 35,'',false,'0001',33)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onchange</name>
+      <type>Main</type>
+      <value>gx.evt.onchange(this)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onblur</name>
+      <type>Main</type>
+      <value>gx.num.valid_integer( this,'.');;gx.evt.onblur(35);</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;TABLE4&quot;)/tbody[1]/tr[1]/td[1]/span[@class=&quot;BaseRBtn RButton_Standard&quot;]/span[@class=&quot;BtnLeft&quot;]/span[@class=&quot;BtnRight&quot;]/span[@class=&quot;BtnBackground&quot;]/input[@class=&quot;BtnText&quot;]</value>
+      <value>id(&quot;PTONRO_0001&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@name='ACEPTAR']</value>
+      <value>//input[@id='PTONRO_0001']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='TABLE4']/tbody/tr/td/span/span/span/span/input</value>
+      <value>//tr[@id='Gridlevel1ContainerRow_0001']/td[3]/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//span/input</value>
+      <value>//td[3]/input</value>
    </webElementXpaths>
 </WebElementEntity>

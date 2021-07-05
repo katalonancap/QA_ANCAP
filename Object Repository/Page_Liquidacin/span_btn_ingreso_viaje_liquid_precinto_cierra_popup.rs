@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Asociar Viaje AIngreso_gxp0_cls</name>
+   <name>span_btn_ingreso_viaje_liquid_precinto_cierra_popup</name>
    <tag></tag>
-   <elementGuidId>2cc0050d-5869-4e90-85b1-d687462adc2e</elementGuidId>
+   <elementGuidId>6562f314-52c3-4a01-a3a4-f1ed244a427c</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>CSS</key>
-         <value>#gxp0_cls</value>
-      </entry>
       <entry>
          <key>XPATH</key>
          <value>//span[@id='gxp0_cls']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#gxp0_cls</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

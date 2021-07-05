@@ -39,7 +39,9 @@ class execution_listeners {
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 		//println testCaseContext.getTestCaseId()
 		//println testCaseContext.getTestCaseVariables()
-		GlobalVariable.FilasExcel=GlobalVariable.FilasExcel+1
+		
+		GlobalVariable.FilasExcel = GlobalVariable.FilasExcel+1
+
 	} 
 	
 	/**

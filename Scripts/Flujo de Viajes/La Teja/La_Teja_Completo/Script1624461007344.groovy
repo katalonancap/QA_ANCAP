@@ -109,7 +109,7 @@ println()
 
 'CREA DOCUMENTO DE CARGA'
 
-'Verifica que está en la pestaña "Detalle del Documento de Carga"'
+'Verifica que está en la pestañ "Detalle de Documentos de Carga '
 WebUI.verifyTextPresent('Detalle de Documentos de Carga del viaje', false)
 
 WebUI.click(findTestObject('Page_Detalle de rden de Carga/input_btn_viaje_detalle_doc_carga_nuevo'))
@@ -137,14 +137,12 @@ WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_
 WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_negocio'), Negocio, true, 
     FailureHandling.OPTIONAL)
 
+'Selecciona "Planta Flete" para clientes Particularesq/EESS '
+WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
+    false, FailureHandling.OPTIONAL)
+
 'Ingresa CLIENTES PARTICULARES/EESS O CLIENTES OFICIALES'
-if (WebUI.verifyTextPresent('Solicitud automática ?', false, FailureHandling.OPTIONAL)) {
-    IngresaSolicitud_Orden()
-} else {
-    'Selecciona "Planta Flete" para clientes Particularesq/EESS '
-    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_planta_flete'), PlantaFlete, 
-        false, FailureHandling.OPTIONAL)
-}
+IngresaSolicitud_Orden()
 
 IngresaProducto()
 
@@ -229,6 +227,45 @@ table: for (int i = 0; i < Rows.size(); i++) {
     }
 }
 
+def IngresaDireccion_viaEntrega() {
+	'Ingresa el ID de la "Dirección" y ID de la "Via de Entrega"'
+	WebUI.click(findTestObject('Page_Detalle de rden de Carga/td_viaje_doc_carga_area_direccion_entrega'))
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_direccion'), IdDireccion)
+
+	WebUI.click(findTestObject('Page_Detalle de rden de Carga/tr_viaje_doc_carga_area_cliente'))
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_via_entrega'), IdViaEntrega)
+
+	WebUI.sendKeys(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_via_entrega'), Keys.chord(Keys.TAB))
+}
+
+def IngresaProducto() {
+	'Llena los campos que se refieren al "Producto"'
+	WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'))
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'), IdProducto)
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_prd_cantidad'), ProdCantidad)
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_unidad'), ProdUnidad)
+}
+
+def IngresaSolicitud_Orden() {
+	'Llena los campos que se refieren al "Solicitud de Entrega" y "Orden Oficial"'
+	WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'),
+		SolicitudAuto, false, FailureHandling.OPTIONAL)
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega,
+		FailureHandling.OPTIONAL)
+
+	WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), FailureHandling.OPTIONAL)
+
+	WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial,
+		FailureHandling.OPTIONAL)
+}
+
+
 'INGRESA CAMION'
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
 
@@ -312,11 +349,57 @@ WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_liquidacion'))
 
 WebUI.verifyElementText(findTestObject('Page_Liquidacin/span_txt_viaje_ingreso_titulo_liquidacion'), 'Liquidación')
 
-WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_prd_temp'), ProdTempLiquid)
+WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_prd_temp'), ProdTempLiquid, FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_cantidad_pedida'))
+WebUI.click(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_cantidad_pedida'), FailureHandling.OPTIONAL)
 
 WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
+
+'TrataERROR: "Faltan Ingresar Precintos"'
+if (WebUI.verifyTextPresent('Faltan Ingresar Precintos', false, FailureHandling.OPTIONAL)) {
+    WebUI.click(findTestObject('Page_Liquidacin/a_tb_viaje_ingreso_liquid_documentos'))
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_precinto'))
+
+    'Cambia para iframe (Popup)'
+    WebUI.switchToFrame(findTestObject('Page_Liquidacin/iframe_Precintos_gxp0_ifrm'), 5)
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_ingresa_precintos'))
+
+    'Vuelve a la pantalla base'
+    WebUI.switchToDefaultContent()
+
+    'Cambia para iframe (Popup)'
+    WebUI.switchToFrame(findTestObject('Page_Liquidacin/iframe_Precintos del docum. de carga_gxp1_ifrm'), 5)
+
+    WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_ingreso_viaje_liquid_serie_precinto'), '1')
+
+    WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_ingreso_viaje_liquid_nro_precinto'), '12345')
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_precinto_modificar'))
+
+    'Vuelve a la pantalla base'
+    WebUI.switchToDefaultContent()
+
+    WebUI.click(findTestObject('Page_Liquidacin/span_btn_ingreso_viaje_liquid_precinto_cierra_popup'))
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
+}
+
+'TrataERROR: "Falta Registro para la planta"'
+if (WebUI.verifyTextPresent('Falta Registro para la planta', false, FailureHandling.OPTIONAL)) {
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_corregir_doc'))
+
+    'Cambia para iframe (Popup)'
+    WebUI.switchToFrame(findTestObject('Page_Liquidacin/iframe_Corregir Documento Carga_gxp0_ifrm'), 5)
+
+    WebUI.click(findTestObject('Page_Liquidacin/span_btn_ingreso_viaje_liquid_corregir_doc_aceptar'))
+
+    'Vuelve a la pantalla base'
+    WebUI.switchToDefaultContent()
+	
+	WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
+}
 
 WebUI.delay(5)
 
@@ -353,9 +436,11 @@ WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_egreso'))
 
 WebUI.click(findTestObject('Page_Egreso/input_btn_viaje_ingreso_egreso_aceptar'))
 
-WebUI.waitForPageLoad(0)
+/*WebUI.waitForPageLoad(0)
 
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
+
+WebUI.delay(3)
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
 
@@ -369,47 +454,10 @@ WebUI.setText(findTestObject('Page_Trabajar con Viajes/input_cbx_viaje_filtro_vi
 
 WebUI.click(findTestObject('Page_Trabajar con Viajes/span_btn_viaje_filtro_buscar'))
 
-validaviajefinalizado()
+validaviajefinalizado()*/
 
 WebUI.closeBrowser()
 
-def IngresaDireccion_viaEntrega() {
-    'Ingresa el ID de la "Dirección" y ID de la "Via de Entrega"'
-    WebUI.click(findTestObject('Page_Detalle de rden de Carga/td_viaje_doc_carga_area_direccion_entrega'))
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_direccion'), IdDireccion)
-
-    WebUI.click(findTestObject('Page_Detalle de rden de Carga/tr_viaje_doc_carga_area_cliente'))
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_via_entrega'), IdViaEntrega)
-
-    WebUI.sendKeys(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_via_entrega'), Keys.chord(Keys.TAB))
-}
-
-def IngresaProducto() {
-    'Llena los campos que se refieren al "Producto"'
-    WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'))
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_producto'), IdProducto)
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_prd_cantidad'), ProdCantidad)
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbx_viaje_doc_carga_unidad'), ProdUnidad)
-}
-
-def IngresaSolicitud_Orden() {
-    'Llena los campos que se refieren al "Solicitud de Entrega" y "Orden Oficial"'
-    WebUI.selectOptionByLabel(findTestObject('Page_Detalle de rden de Carga/select_sbx_viaje_doc_carga_solicitud_auto'), 
-        SolicitudAuto, false, FailureHandling.OPTIONAL)
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viajes_doc_carga_solicitud_entrega'), SolicitudEntrega, 
-        FailureHandling.OPTIONAL)
-
-    WebUI.clearText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), FailureHandling.OPTIONAL)
-
-    WebUI.setText(findTestObject('Page_Detalle de rden de Carga/input_cbox_viaje_doc_carga_orden_oficial'), OrdenOficial, 
-        FailureHandling.OPTIONAL)
-}
 
 def validaviajeagenda() {
     'RECORRE TABLA "VIAJE AGENDA"'

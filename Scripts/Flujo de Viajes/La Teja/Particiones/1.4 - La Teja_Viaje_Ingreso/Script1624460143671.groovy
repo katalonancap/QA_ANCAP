@@ -138,11 +138,42 @@ WebUI.click(findTestObject('Page_Ingreso/img_btn_viaje_ingreso_liquidacion'))
 
 WebUI.verifyElementText(findTestObject('Page_Liquidacin/span_txt_viaje_ingreso_titulo_liquidacion'), 'Liquidación')
 
-WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_prd_temp'), ProdTempLiquid)
+WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_prd_temp'), ProdTempLiquid, FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_cantidad_pedida'))
+WebUI.click(findTestObject('Page_Liquidacin/input_cbx_viaje_ingreso_liquid_cantidad_pedida'), FailureHandling.OPTIONAL)
 
 WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
+
+'TrataERROR: "Faltan Ingresar Precintos"'
+if (WebUI.verifyTextPresent('Faltan Ingresar Precintos', false, FailureHandling.OPTIONAL)) {
+    WebUI.click(findTestObject('Page_Liquidacin/a_tb_viaje_ingreso_liquid_documentos'))
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_precinto'))
+
+    'Cambia para iframe (Popup)'
+    WebUI.switchToFrame(findTestObject('Page_Liquidacin/iframe_Precintos_gxp0_ifrm'), 5)
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_ingresa_precintos'))
+
+    'Vuelve a la pantalla base'
+    WebUI.switchToDefaultContent()
+
+    'Cambia para iframe (Popup)'
+    WebUI.switchToFrame(findTestObject('Page_Liquidacin/iframe_Precintos del docum. de carga_gxp1_ifrm'), 5)
+
+    WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_ingreso_viaje_liquid_serie_precinto'), '1')
+
+    WebUI.setText(findTestObject('Page_Liquidacin/input_cbx_ingreso_viaje_liquid_nro_precinto'), '12345')
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_ingreso_viaje_liquid_precinto_modificar'))
+
+    'Vuelve a la pantalla base'
+    WebUI.switchToDefaultContent()
+
+    WebUI.click(findTestObject('Page_Liquidacin/span_btn_ingreso_viaje_liquid_precinto_cierra_popup'))
+
+    WebUI.click(findTestObject('Page_Liquidacin/input_btn_viaje_ingreso_liquid_finalizar'))
+}
 
 WebUI.delay(5)
 
@@ -182,6 +213,8 @@ WebUI.click(findTestObject('Page_Egreso/input_btn_viaje_ingreso_egreso_aceptar')
 WebUI.waitForPageLoad(0)
 
 WebUI.click(findTestObject('Page_Antares/span_menu_plantas'))
+
+WebUI.delay(3)
 
 WebUI.click(findTestObject('Page_Antares/td_menu_trabajar_con_viaje'))
 
